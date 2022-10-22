@@ -7,7 +7,7 @@ export default class SliderSwitch extends Component {
         super();
         this.state = {
             sliderValue: 0,
-            switchSliderValue: false
+            switchSliderValue: false,
         };
     }
 
@@ -15,15 +15,16 @@ export default class SliderSwitch extends Component {
         return (
             <View style={styles.container}>
                 <View>
-                    <Text>
+                    {/* <Text>
                         {this.state.switchSliderValue ? this.state.sliderValue : ''}
-                    </Text>
+                    </Text> */}
                     {this.state.switchSliderValue && <Slider
                         maximumValue={1000}
                         minimumValue={0}
                         step={10}
                         minimumTrackTintColor="violet"
                         maximumTrackTintColor="green"
+                        thumbTintColor='black'
                         onValueChange={sliderValue => this.setState({ sliderValue })}
                     />}
                     {/* {this.state.switchSliderValue ? <Slider
@@ -34,12 +35,16 @@ export default class SliderSwitch extends Component {
                         maximumTrackTintColor="green"
                         onValueChange={sliderValue => this.setState({ sliderValue })}
                     />: ''} */}
+                    <Text>
+                        {this.state.switchSliderValue ? this.state.sliderValue : ''}
+                    </Text>
                 </View>
                 <View style={styles.switchContainer}>
                     <Switch
                         value={this.state.switchSliderValue}
                         onValueChange={(switchSliderValue) => this.setState({ switchSliderValue })}
                         //trackColor={{true:'yellow'}}
+                        thumbColor='black'
                         ios_backgroundColor="violet" />
                 </View>
             </View>
