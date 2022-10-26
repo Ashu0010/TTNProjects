@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { View, Text, TouchableOpacity, SafeAreaView, StyleSheet, ImageBackground, Image } from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
 
 function HomeScreen({ navigation }) {
     return (
         <View style={styles.container}>
+
             <ImageBackground
                 source={require('/Users/ashishnegi/Desktop/ReactNativeProjects/Images/images.jpeg')}
                 resizeMode='cover'
@@ -16,46 +18,51 @@ function HomeScreen({ navigation }) {
                         </Text>
                     </View>
                     <View>
-                        <TouchableOpacity
-                            style={styles.buttonContainer}
-                            onPress={() => navigation.navigate('CounterApp')}>
-                            <Text style={styles.buttonText}>
-                                Counter App
-                            </Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity
-                            style={styles.buttonContainer}
-                            onPress={() => navigation.navigate('TicketApp')}>
-                            <Text style={styles.buttonText}>
-                                Book Ticket App
-                            </Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity
-                            style={styles.buttonContainer}
-                            onPress={() => navigation.navigate('LogInApp')}>
-                            <Text style={styles.buttonText}>
-                                Log In App Front
-                            </Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity
-                            style={styles.buttonContainer}
-                            onPress={() => navigation.navigate('OtpApp')}>
-                            <Text style={styles.buttonText}>
-                                OTP App Front
-                            </Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity
-                            style={styles.buttonContainer}
-                            onPress={() => navigation.navigate('ColorInScreenApp')}>
-                            <Text style={styles.buttonText}>
-                                Color In Screen
-                            </Text>
-                        </TouchableOpacity>
+                        <ScrollView>
+                            <TouchableOpacity
+                                style={styles.buttonContainer}
+                                onPress={() => navigation.navigate('Loading')}>
+                                <Text style={styles.buttonText}>
+                                    WebView
+                                </Text>
+                            </TouchableOpacity>
+                            <TouchableOpacity
+                                style={styles.buttonContainer}
+                                onPress={() => navigation.navigate('Slider')}>
+                                <Text style={styles.buttonText}>
+                                    Slider
+                                </Text>
+                            </TouchableOpacity>
+                            <TouchableOpacity
+                                style={styles.buttonContainer}
+                                onPress={() => navigation.navigate('SectionListAssignment')}>
+                                <Text style={styles.buttonText}>
+                                    SectionList
+                                </Text>
+                            </TouchableOpacity>
+                            <TouchableOpacity
+                                style={styles.buttonContainer}
+                                onPress={() => navigation.navigate('Back')}>
+                                <Text style={styles.buttonText}>
+                                    ReactsAlert
+                                </Text>
+                            </TouchableOpacity>
+                            <TouchableOpacity
+                                style={styles.buttonContainer}
+                                onPress={() => navigation.navigate('ClipBoard')}>
+                                <Text style={styles.buttonText}>
+                                    ClipBoard
+                                </Text>
+                            </TouchableOpacity>
+
+                        </ScrollView>
                     </View>
 
                 </View>
-            </ImageBackground>
-        </View>
+
+            </ImageBackground >
+
+        </View >
     )
 }
 export default HomeScreen;
@@ -67,8 +74,9 @@ const styles = StyleSheet.create({
     homestyle: {
         flex: 1,
         alignItems: 'center',
-        padding: 70,
-        marginBottom: 30,
+        padding: 10,
+        marginBottom: 10,
+        marginTop: 20,
 
     },
     image: {
@@ -77,21 +85,21 @@ const styles = StyleSheet.create({
     homestyleText: {
         fontSize: 20,
         fontWeight: 'bold',
-        paddingBottom: 50
+        paddingBottom: 5,
     },
     buttonContainer: {
         marginTop: 15,
-        padding: 12,
-        borderWidth: 0.6,
-        borderRadius: 20,
+        padding: 10,
+        borderWidth: 0.8,
+        borderRadius: 18,
         borderBottomColor: '#E738EC',
         borderLeftColor: '#E738EC',
         backgroundColor: 'rgb(109,188,120)',
         borderColor: '#6438EC',
         alignItems: "center",
         marginHorizontal: 60,
-        height: 50,
-        width: 250,
+        height: 43,
+        width: 180,
     },
     buttonBox: {
         marginTop: 30

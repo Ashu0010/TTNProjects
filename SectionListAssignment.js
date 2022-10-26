@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { StyleSheet, Text, View, SafeAreaView, SectionList, StatusBar } from "react-native";
-import { ScrollView } from "react-native-gesture-handler";
+
 
 const Data = [
     {
