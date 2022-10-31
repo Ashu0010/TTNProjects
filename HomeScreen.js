@@ -54,7 +54,20 @@ function HomeScreen({ navigation }) {
                                     ClipBoard
                                 </Text>
                             </TouchableOpacity>
-
+                            <TouchableOpacity
+                                style={styles.buttonContainer}
+                                onPress={() => navigation.navigate('AnimeText')}>
+                                <Text style={styles.buttonText}>
+                                    AnimatedText
+                                </Text>
+                            </TouchableOpacity>
+                            <TouchableOpacity
+                                style={styles.buttonContainer}
+                                onPress={() => navigation.navigate('AnimeCross')}>
+                                <Text style={styles.buttonText}>
+                                    AnimateCross
+                                </Text>
+                            </TouchableOpacity>
                         </ScrollView>
                     </View>
 

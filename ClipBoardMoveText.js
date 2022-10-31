@@ -16,7 +16,32 @@ export default function ClipBoardMoveText() {
 
   const [copiedText, setCopiedText] = useState('');
   const [showCopiedText, setShowCopiedText] = useState(false);
-  
+
+  useEffect(() => {
+    const backAction = () => {
+      Alert.alert("Hold on!", "Are you sure you want to go back?", [
+        'Back Button',
+        "Click Confirm to go back !",
+        {
+          text: "Cancel",
+          onPress: () => null,
+          style: "cancel"
+        },
+        { 
+          text: "Confirm", 
+          onPress: () => props.navigation.goBack() }
+      ]);
+      return true;
+    };
+
+    const backHandler = BackHandler.addEventListener(
+      "hardwareBackPress",
+      backAction
+    );
+
+    return () => backHandler.remove();
+  }, []);
+
   const copyToClipboard = () => {
     Clipboard.setString(copiedText);
     
