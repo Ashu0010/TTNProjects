@@ -19,6 +19,7 @@ import AlertBackScreen from './AlertBackScreen';
 import ClipBoardMoveText from './ClipBoardMoveText';
 import AnimatedText from './src/components/AnimatedText';
 import AnimateTextCross from './src/components/AnimateTextCross';
+// import Hooks from './src/screens/Hooks';
 const Stack = createNativeStackNavigator();
 
 class App extends Component {
@@ -35,6 +36,7 @@ class App extends Component {
                     <Stack.Screen name="ClipBoard" component={ClipBoardMoveText} />
                     <Stack.Screen name="AnimeText" component={AnimatedText} />
                     <Stack.Screen name="AnimeCross" component={AnimateTextCross} />
+                    {/* <Stack.Screen name="ScrollHideTop" component={Hooks} /> */}
                 </Stack.Navigator>
             </NavigationContainer>
         );

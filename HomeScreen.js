@@ -68,6 +68,13 @@ function HomeScreen({ navigation }) {
                                     AnimateCross
                                 </Text>
                             </TouchableOpacity>
+                            <TouchableOpacity
+                                style={styles.buttonContainer}
+                                onPress={() => navigation.navigate('ScrollHideTop')}>
+                                <Text style={styles.buttonText}>
+                                    ButtonHide
+                                </Text>
+                            </TouchableOpacity>
                         </ScrollView>
                     </View>
 
