@@ -4,7 +4,7 @@ import { ScrollView } from 'react-native-gesture-handler';
 
 function HomeScreen({ navigation }) {
     return (
-        <View style={styles.container}>
+        <SafeAreaView style={styles.container}>
 
             <ImageBackground
                 source={require('/Users/ashishnegi/Desktop/ReactNativeProjects/Images/images.jpeg')}
@@ -19,7 +19,7 @@ function HomeScreen({ navigation }) {
                     </View>
                     <View>
                         <ScrollView>
-                            <TouchableOpacity
+                            {/* <TouchableOpacity
                                 style={styles.buttonContainer}
                                 onPress={() => navigation.navigate('Loading')}>
                                 <Text style={styles.buttonText}>
@@ -74,6 +74,13 @@ function HomeScreen({ navigation }) {
                                 <Text style={styles.buttonText}>
                                     ButtonHide
                                 </Text>
+                            </TouchableOpacity> */}
+                            <TouchableOpacity
+                                style={styles.buttonContainer}
+                                onPress={() => navigation.navigate('ApiUI')}>
+                                <Text style={styles.buttonText}>
+                                    ApiUI
+                                </Text>
                             </TouchableOpacity>
                         </ScrollView>
                     </View>
@@ -82,7 +89,7 @@ function HomeScreen({ navigation }) {
 
             </ImageBackground >
 
-        </View >
+        </SafeAreaView >
     )
 }
 export default HomeScreen;
