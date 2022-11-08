@@ -7,7 +7,7 @@ function HomeScreen({ navigation }) {
         <SafeAreaView style={styles.container}>
 
             <ImageBackground
-                source={require('/Users/ashishnegi/Desktop/ReactNativeProjects/Images/images.jpeg')}
+                source={require('./Images/images.jpeg')}
                 resizeMode='cover'
                 style={styles.image}>
 
@@ -19,7 +19,7 @@ function HomeScreen({ navigation }) {
                     </View>
                     <View>
                         <ScrollView>
-                            {/* <TouchableOpacity
+                            <TouchableOpacity
                                 style={styles.buttonContainer}
                                 onPress={() => navigation.navigate('Loading')}>
                                 <Text style={styles.buttonText}>
@@ -74,14 +74,15 @@ function HomeScreen({ navigation }) {
                                 <Text style={styles.buttonText}>
                                     ButtonHide
                                 </Text>
-                            </TouchableOpacity> */}
-                            <TouchableOpacity
+                            </TouchableOpacity>
+                            {/* <TouchableOpacity
                                 style={styles.buttonContainer}
                                 onPress={() => navigation.navigate('ApiUI')}>
                                 <Text style={styles.buttonText}>
                                     ApiUI
                                 </Text>
-                            </TouchableOpacity>
+                            </TouchableOpacity> */}
+        
                         </ScrollView>
                     </View>
 

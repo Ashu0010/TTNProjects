@@ -20,7 +20,7 @@ export default class TabNavigationProjectScreens extends Component {
                             tabBarLabel: 'Home',
                             tabBarIcon: () =>
                                 <Image
-                                    source={require('/Users/ashishnegi/Desktop/ReactNativeProjects/Images/icons8-home-100.png')}
+                                    source={require('./Images/icons8-home-100.png')}
                                     style={styles.home}
                                     resizeMode='contain' />
                         }} />
@@ -29,7 +29,7 @@ export default class TabNavigationProjectScreens extends Component {
                             tabBarLabel: 'Categories',
                             tabBarIcon: () =>
                                 <Image
-                                    source={require('/Users/ashishnegi/Desktop/ReactNativeProjects/Images/icons8-menu-rounded-48.png')}
+                                    source={require('./Images/icons8-menu-rounded-48.png')}
                                     style={styles.home}
                                     resizeMode='contain' />
                         }} />
@@ -38,7 +38,7 @@ export default class TabNavigationProjectScreens extends Component {
                             tabBarLabel: 'My Cart',
                             tabBarIcon: () =>
                                 <Image
-                                    source={require('/Users/ashishnegi/Desktop/ReactNativeProjects/Images/icons8-shopping-cart-50.png')}
+                                    source={require('./Images/icons8-shopping-cart-50.png')}
                                     style={styles.home}
                                     resizeMode='contain' />
                         }} />
@@ -47,7 +47,7 @@ export default class TabNavigationProjectScreens extends Component {
                             tabBarLabel: 'Whishlist',
                             tabBarIcon: () =>
                                 <Image
-                                    source={require('/Users/ashishnegi/Desktop/ReactNativeProjects/Images/icons8-heart-50.png')}
+                                    source={require('./Images/icons8-heart-50.png')}
                                     style={styles.home}
                                     resizeMode='contain' />
                         }} />
@@ -60,7 +60,7 @@ export default class TabNavigationProjectScreens extends Component {
                             tabBarLabel: 'Account',
                             tabBarIcon: () =>
                                 <Image
-                                    source={require('/Users/ashishnegi/Desktop/ReactNativeProjects/Images/icons8-account-50.png')}
+                                    source={require('./Images/icons8-account-50.png')}
                                     style={styles.home}
                                     resizeMode='contain' />
                         }} />

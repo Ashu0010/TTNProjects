@@ -46,7 +46,7 @@ export default function AlertBackScreen(props) {
         return (
             <View style={styles.page}>
                 <ImageBackground
-                    source={require('/Users/ashishnegi/Desktop/ReactNativeProjects/Images/images.jpeg')}
+                    source={require('./Images/images.jpeg')}
                     resizeMode='cover'
                     style={styles.image}>
                     <View style={styles.container}>

@@ -17,7 +17,7 @@ export default Apipassing = (props) => {
         try {
             const data = await AsyncStorage.getItem('userKey')
             if (data !== null) {
-                // console.log('data',data);
+                console.log('data',data);
                 setUserData(JSON.parse(data));
             }
         } catch (error) {
@@ -37,7 +37,9 @@ export default Apipassing = (props) => {
     const userDataDelete = async () => {
         try {
             AsyncStorage.clear().then(() => {
-               props.navigation.replace('ApiUI')
+                props.navigation.navigate('ApiUI')
+               //props.navigation.replace('ApiUI')  // empty the log 
+               //props.navigation.goBack()
             }).catch(() => {});
             // console.log('User Info Deleted');
         } catch (error) {
@@ -71,11 +73,11 @@ export default Apipassing = (props) => {
     return (
         <SafeAreaView style={styles.cont}>
             <View style={styles.mainView}>
-                <Text style={styles.text}>{userData.name}</Text>
-                <Text style={styles.text}>{userData.email}</Text>
-                <Text style={styles.text}>{userData.phone}</Text>
-                <Text style={styles.text}>{userData.password}</Text>
-                <Text style={styles.text}>{userData.confirmPassword}</Text>
+                <Text style={styles.text}>Name : {userData.name}</Text>
+                <Text style={styles.text}>Email : {userData.email}</Text>
+                <Text style={styles.text}>Phone : {userData.phone}</Text>
+                <Text style={styles.text}>Password: {userData.password}</Text>
+                <Text style={styles.text}>confirm Password : {userData.confirmPassword}</Text>
             </View>
             <View>
                 <TouchableOpacity style={styles.floatingButton} onPress={backButton}>

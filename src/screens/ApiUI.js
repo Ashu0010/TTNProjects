@@ -5,11 +5,10 @@ import InputTextComponent from '../components/InputTextComponent'
 
 export default function ApiUI(props) {
 
-
     return (
         <View style={styles.container}>
             <ImageBackground 
-            source={require('/Users/ashishnegi/Desktop/ReactNativeProjects/Images/images.jpeg')}
+            source={require('./Images/images.jpeg')}
             resizeMode='cover'
             style={styles.image}>
 
@@ -27,7 +26,7 @@ export default function ApiUI(props) {
                     Create an account to Q Allure to get all features
                 </Text> 
 
-                <InputTextComponent {...props}/>
+                <InputTextComponent {...props} />
 
                 <View style={styles.bottomText}>
                     <Text style={styles.topTextThree}>
@@ -35,6 +34,7 @@ export default function ApiUI(props) {
                     </Text>
                     <Text style={styles.loginHere}> Login here</Text>
                 </View>
+
             </View>
             </ImageBackground>
         </View>
@@ -42,7 +42,7 @@ export default function ApiUI(props) {
 }
 const styles = StyleSheet.create({
     main:{
-        height:35,
+        height:30,
     },
     container: {
         flex: 1,
@@ -61,6 +61,7 @@ const styles = StyleSheet.create({
         fontSize: 12,
         textAlign: 'center',
         fontWeight: '500',
+        marginBottom:20,
     },
     blank: {
         height: 50,
@@ -81,7 +82,7 @@ const styles = StyleSheet.create({
     },
    
     bottomText: {
-
+        marginTop:40,
         height: 100,
         width: 300,
         flexDirection: 'row',

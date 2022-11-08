@@ -4,38 +4,39 @@ import { FlatList } from 'react-native-gesture-handler'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import ApiPassing from '../screens/ApiPassing';
+import ApiData from './ApiData';
 //import { AsyncStorage } from '@react-native-async-storage/async-storage'
 
-const Data = [
-    {
-        text: 'Enter Your Name Here',
-        image: require('/Users/ashishnegi/Desktop/ReactNativeProjects/Images/3177440.png'),
-        id:'name'
-    },
-    {
-        text: 'Enter Your Email Id Here',
-        image: require('/Users/ashishnegi/Desktop/ReactNativeProjects/Images/526913.png'),
-        id:'email'
-    },
-    {
-        text: 'Enter Your Phone Here',
-        image: require('/Users/ashishnegi/Desktop/ReactNativeProjects/Images/240_F_223243116_ppy6oxRMqCTUAWvuUE0QIUq8kOhaE7vt.jpg'),
-        id:'phone'
-    },
-    {
-        text: '**********************',
-        image: require('/Users/ashishnegi/Desktop/ReactNativeProjects/Images/5672647.png'),
-        id:'password'
-    },
-    {
-        text: '**********************',
-        image: require('/Users/ashishnegi/Desktop/ReactNativeProjects/Images/5672647.png'),
-        id:'confirmPassword'
-    },
-]
+// const Data = [
+//     {
+//         text: 'Enter Your Name Here',
+//         image: require('./Images/3177440.png'),
+//         id:'name'
+//     },
+//     {
+//         text: 'Enter Your Email Id Here',
+//         image: require('./Images/526913.png'),
+//         id:'email'
+//     },
+//     {
+//         text: 'Enter Your Phone Here',
+//         image: require('./Images/240_F_223243116_ppy6oxRMqCTUAWvuUE0QIUq8kOhaE7vt.jpg'),
+//         id:'phone'
+//     },
+//     {
+//         text: '**********************',
+//         image: require('./Images/5672647.png'),
+//         id:'password'
+//     },
+//     {
+//         text: '**********************',
+//         image: require('./Images/5672647.png'),
+//         id:'confirmPassword'
+//     },
+// ]
 
 export default InputTextComponent = (props) => {
+    const [focus, setFocus]= useState(false);
 
     const [values, setValues]=useState({
         name:'',
@@ -45,10 +46,12 @@ export default InputTextComponent = (props) => {
         confirmPassword:'',
     });    
 
-    const dataSetter =(val,id)=>{
+     
+
+    const dataSetter =(data,id)=>{
         setValues({
             ...values,
-            [id]:val
+            [id]:data
         })
     }
 
@@ -57,7 +60,16 @@ export default InputTextComponent = (props) => {
             // console.log('values',values);
             if(values.name.length>0 && values.email.length>0 && values.phone.length>0 && values.password.length>0 && values.confirmPassword.length>0){  
              AsyncStorage.setItem("userKey", JSON.stringify(values)).then(() => {
-                 props.navigation.navigate('ApiPassing')
+                //  props.navigation.replace('ApiPassing')
+                setValues({
+                    name:'',
+                    email:'',
+                    phone:'',
+                    password:'',
+                    confirmPassword:'',
+                })
+                
+                props.navigation.navigate('ApiPassing')
              }).catch(() => {})
             }
             else{
@@ -66,29 +78,32 @@ export default InputTextComponent = (props) => {
         } catch (error) {
           console.log(error);
         }
+        
       };
 
     return (
-        <SafeAreaView>
+        <View style={styles.contain}>
             <FlatList
-                data={Data}
-                keyExtractor={(item)=>item.id}
+                data={ApiData}
+                // keyExtractor={(item,index)=>index.id}
                 renderItem={({ item, index }) => {
                     return (
-
-                        item.text && item.image && item.id && (
-                            <View style={styles.textInp}>
+                        item.text && item.image && (
+                            <View style={styles.textInp(focus)}>
+                            {/* <View style={styles.textInp}> */}
                                 <View>
                                     <Image source={item.image}
                                         style={styles.image}
                                     />
                                 </View>
                                 <TextInput 
-                                    value={values}
+                                    value={values[item.id]}
                                     placeholder={item.text}
-                                    onChangeText={(values)=>{dataSetter(values,item.id)}}
+                                    style={styles.textInputText}
+                                    onBlur={()=>setFocus(false)}
+                                    onFocus={()=>setFocus(true)}
+                                    onChangeText={(items)=>{dataSetter(items,item.id)}}
                                 />
-
                             </View>
                         )
                     )
@@ -102,32 +117,49 @@ export default InputTextComponent = (props) => {
                     </Text>
             </TouchableOpacity> 
             </View>
-        </SafeAreaView>
+        </View>
         
     )
 
 }
 
 const styles = StyleSheet.create({
+    contain:{
+        flex:1,
+    },
     main:{
         marginTop:20
     },
-    textInp: {
+    textInp: (focus) => ({
         // borderWidth: 1,
         borderRadius: 25,
         height: 60,
-        width: 320,
+        width: 315,
         padding: 11,
-        paddingHorizontal: 25,
+        paddingHorizontal: 28,
         marginBottom: 18,
         backgroundColor: 'rgb(238,239,243)',
+        borderColor: focus ? 'rgb(28,85,200)' : 'transparent',
+        borderWidth:1,
         color: 'rgb(166,166,167)',
         flexDirection:'row',
-    },
+    }),
+    // textInp: {
+    //     // borderWidth: 1,
+    //     borderRadius: 25,
+    //     height: 60,
+    //     width: 315,
+    //     padding: 11,
+    //     paddingHorizontal: 28,
+    //     marginBottom: 18,
+    //     backgroundColor: 'rgb(238,239,243)',
+    //     color: 'rgb(166,166,167)',
+    //     flexDirection:'row',
+    // },
     image: {
         height: 37,
         width: 37,
-        marginRight:10,
+        marginRight:13,
 
     },
     textInpButton: {
@@ -139,6 +171,9 @@ const styles = StyleSheet.create({
         alignSelf: 'center',
         backgroundColor: 'rgb(28,85,200)',
         marginBottom: 5,
+    },
+    textInputText:{
+        fontSize:16
     },
     textInpButtonText: {
         fontWeight: '700',

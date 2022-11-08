@@ -201,7 +201,7 @@ export default class OTPAppFront extends Component {
                     </View>
                     {/* <TouchableOpacity style={styles.backButton}>
                         <Image
-                            source={require('/Users/ashishnegi/Desktop/CounterApp/icons8-back-60.png')}
+                            source={require('./Images/icons8-back-60.png')}
                             style={styles.backButtonImage}
                             resizeMode='contain' />
                     </TouchableOpacity> */}

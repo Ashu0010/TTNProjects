@@ -56,7 +56,7 @@ export default class Login extends Component {
                     <Image
                             resizeMode={'contain'}
                             style={styles.eye}
-                            source={require('/Users/ashishnegi/Desktop/ReactNativeProjects/Images/icons8-hide-60.png')} />
+                            source={require('./Images/icons8-hide-60.png')} />
                     </TouchableOpacity> */}
 
                     <TouchableOpacity>

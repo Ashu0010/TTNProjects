@@ -35,7 +35,7 @@ export default class ScrollStyling extends Component {
                 <View style={styles.headerView}>
                     <TouchableOpacity>
                         <Image
-                            source={require('/Users/ashishnegi/Desktop/CounterApp/icons8-back-60.png')}
+                            source={require('./Images/icons8-back-60.png')}
                             style={styles.logo}
                             resizeMode='contain' />
                     </TouchableOpacity>
@@ -44,7 +44,7 @@ export default class ScrollStyling extends Component {
 
                     <TouchableOpacity>
                         <Image
-                            source={require('/Users/ashishnegi/Desktop/CounterApp/icons8-bookmark-60.png')}
+                            source={require('./Images/icons8-bookmark-60.png')}
                             style={styles.logo}
                             resizeMode='contain' />
                     </TouchableOpacity>
@@ -55,7 +55,7 @@ export default class ScrollStyling extends Component {
 
                     <View style={styles.moviePoster}>
                         <Image
-                            source={require('/Users/ashishnegi/Desktop/CounterApp/images/anime1988-Demon-Slayer-10-786x1100.jpeg')}
+                            source={require('./Images/anime1988-Demon-Slayer-10-786x1100.jpeg')}
                             style={styles.image}
                             resizeMode='contain' />
                     </View>
@@ -154,27 +154,27 @@ export default class ScrollStyling extends Component {
                             <View style={styles.screenshotsScrollView}>
                                 <Image
                                     resizeMode={'contain'}
-                                    source={require('/Users/ashishnegi/Desktop/CounterApp/images/img2021052511175286177600.png')}
+                                    source={require('./Images/img2021052511175286177600.png')}
                                     style={styles.screenshotImage} />
                                 <Image
                                     resizeMode={'contain'}
-                                    source={require('/Users/ashishnegi/Desktop/CounterApp/images/img2021052511175286177600.png')}
+                                    source={require('./Images/img2021052511175286177600.png')}
                                     style={styles.screenshotImage} />
                                 <Image
                                     resizeMode={'contain'}
-                                    source={require('/Users/ashishnegi/Desktop/CounterApp/images/img2021052511175286177600.png')}
+                                    source={require('./Images/img2021052511175286177600.png')}
                                     style={styles.screenshotImage} />
                                 <Image
                                     resizeMode={'contain'}
-                                    source={require('/Users/ashishnegi/Desktop/CounterApp/images/img2021052511175286177600.png')}
+                                    source={require('./Images/img2021052511175286177600.png')}
                                     style={styles.screenshotImage} />
                                 <Image
                                     resizeMode={'contain'}
-                                    source={require('/Users/ashishnegi/Desktop/CounterApp/images/img2021052511175286177600.png')}
+                                    source={require('./Images/img2021052511175286177600.png')}
                                     style={styles.screenshotImage} />
                                 <Image
                                     resizeMode={'contain'}
-                                    source={require('/Users/ashishnegi/Desktop/CounterApp/images/img2021052511175286177600.png')}
+                                    source={require('./Images/img2021052511175286177600.png')}
                                     style={styles.screenshotImage} />
                             </View>
 

@@ -4,6 +4,7 @@
 
 import {AppRegistry} from 'react-native';
 import App from './App';
+//import App from './Practice/screens/Home/ToDoHome';
 //import App from './src/screens/Practice/Text';
 //import App from './src/components/AnimateCross';
 //import App from './src/screens/Hooks';
