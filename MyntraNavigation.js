@@ -3,10 +3,10 @@ import { Image, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MyntraScreen from './MyntraScreen';
-import AlertOne from './AlertOne';
-import AlertTwo from './AlertTwo';
-import AlertThree from './AlertThree';
-import AlertFour from './AlertFour';
+import AlertOne from './src/components/AlertOne';
+import AlertTwo from './src/components/AlertTwo';
+import AlertThree from './src/components/AlertThree';
+import AlertFour from './src/components/AlertFour';
 
 const Tab = createBottomTabNavigator();
 
