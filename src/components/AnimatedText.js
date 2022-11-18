@@ -41,8 +41,8 @@ export default class AnimatedText extends Component {
                         fontSize: this.state.fadeTextSize,
                         transform: [{
                             rotate: this.state.fadeTextSpin.interpolate({
-                                inputRange: [0, 0.2, 0.4, 0.6, 0.8, 1],
-                                outputRange: ['0deg', '360deg', '-360deg', '360deg', '-360deg', '360deg'],
+                                inputRange: [0,  1],
+                                outputRange: ['0deg', '7200deg'],
 
                             })
                         }]

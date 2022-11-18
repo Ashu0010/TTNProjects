@@ -50,7 +50,7 @@ export default function ClipBoardMoveText() {
   const fetchCopiedText = async () => {
     const text = await Clipboard.getString();
     setCopiedText('');
-    Alert.alert('Copied Text', copiedText);
+    Alert.alert('Copied Text', text);
 
   }
   return (

@@ -20,8 +20,8 @@ import ClipBoardMoveText from './src/screens/ClipBoardMoveText';
 import AnimatedText from './src/components/AnimatedText';
 import AnimateTextCross from './src/components/AnimateTextCross';
 import Hooks from './src/screens/Hooks';
-// import ApiUI from './src/screens/ApiUI';
-// import ApiPassing from './src/screens/ApiPassing';
+import ApiUI from './src/screens/ApiUI';
+import ApiPassing from './src/screens/ApiPassing';
 const Stack = createNativeStackNavigator();
 
 class App extends Component {
@@ -39,9 +39,9 @@ class App extends Component {
                     <Stack.Screen name="AnimeText" component={AnimatedText} />
                     <Stack.Screen name="AnimeCross" component={AnimateTextCross} />
                     <Stack.Screen name="ScrollHideTop" component={Hooks} />
-                    {/* <Stack.Screen name="ApiUI" component={ApiUI} />
+                    <Stack.Screen name="ApiUI" component={ApiUI} />
                     <Stack.Screen name="ApiPassing" component={ApiPassing} />
-                    <Stack.Screen name="CHILD" component={Parent} /> */}
+                    {/* <Stack.Screen name="CHILD" component={Parent} /> */}
                     
                 </Stack.Navigator>
             </NavigationContainer>

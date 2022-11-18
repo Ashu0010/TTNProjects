@@ -75,13 +75,13 @@ function HomeScreen({ navigation }) {
                                     ButtonHide
                                 </Text>
                             </TouchableOpacity>
-                            {/* <TouchableOpacity
+                            <TouchableOpacity
                                 style={styles.buttonContainer}
                                 onPress={() => navigation.navigate('ApiUI')}>
                                 <Text style={styles.buttonText}>
                                     ApiUI
                                 </Text>
-                            </TouchableOpacity> */}
+                            </TouchableOpacity>
         
                         </ScrollView>
                     </View>

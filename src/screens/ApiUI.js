@@ -8,7 +8,7 @@ export default function ApiUI(props) {
     return (
         <View style={styles.container}>
             <ImageBackground 
-            source={require('./Images/images.jpeg')}
+            source={require('../../Images/images.jpeg')}
             resizeMode='cover'
             style={styles.image}>
 
